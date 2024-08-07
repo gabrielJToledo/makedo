@@ -1,0 +1,24 @@
+.bg-services {
+    background-color: rgb(236 238 242);
+    width: 50%;
+}
+
+.division {
+    background-color: black;
+    height: 5px;
+    margin: 30px 0;
+}
+
+@media (max-width: 1024px) {
+    .servicos-p {
+        text-align: center;
+    }
+
+    .division {
+        width: 75%;
+    }
+
+    .bg-services {
+        width: 90%;
+    }
+}

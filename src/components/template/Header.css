@@ -1,0 +1,135 @@
+.logo {
+  height: 50px;
+}
+
+.header {
+  height: 90px;
+  background-color: white;
+}
+
+.menu_item {
+  color: var(--primary-color);
+}
+
+.social-icons {
+  color: black;
+}
+
+/* HeadRoom */
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15 !important;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -25px !important;
+  position: fixed;
+  transform: translateY(-100%);
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.menu_item {
+  position: relative;
+  padding-bottom: 5px; /* Ajuste a altura conforme necessário */
+}
+
+.menu_item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Ajuste a espessura conforme necessário */
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.menu_item.active::after {
+  background-color: #000; /* Ajuste a cor conforme necessário */
+}
+
+/* Menu Icon */
+.menu-icon {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-icon .fa-bars, .menu-icon .fa-times {
+  transition: all 0.3s ease;
+}
+
+.menu-icon.open .fa-bars {
+  opacity: 0;
+}
+
+.menu-icon.open .fa-times {
+  opacity: 1;
+}
+
+.menu-icon.open .fa-bars::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.menu-icon.open .fa-bars::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+
+/* Mobile */
+
+.show-desk {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .show-desk {
+    display: none !important;
+  }
+}

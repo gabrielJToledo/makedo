@@ -1,0 +1,57 @@
+.container--black {
+    background-color: black;
+}
+
+.home-text {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.btn--whiteAndBlack {
+    all: unset;
+    background-color: white;
+    transition: .3s;
+    padding: 10px 70px;
+    font-size: 1.4em;
+}
+
+.btn--whiteAndBlack:hover {
+    background-color: #0d1419;
+    color: white;
+}
+
+.logo-home {
+    height: 180px;
+    object-fit: contain;
+}
+
+.h2-home {
+    font-size: 3.5em;
+}
+
+@media (max-width: 768px) {
+    .home-text {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .h1-mobile {
+        font-size: 30px;
+    }
+
+    p.text-p_mobile {
+        font-size: .6em !important;
+    }
+
+    img.logo-home {
+        height: unset;
+        margin-bottom: unset !important;
+    }
+
+    .logo {
+        width: 150px;
+        object-fit: contain;
+    }
+}
